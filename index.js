@@ -1,11 +1,11 @@
-console.log("bacot jokowi");
-const express = require('express');
+const express = require("express");
 const app = express();
-const bookRoutes = require('./routes/bookRoutes');
+const todoRoutes = require("./routes/todos");
+const PORT = 3000;
 
 app.use(express.json());
-app.use('/api/books', bookRoutes);
+app.use("/api/todos", todoRoutes);
 
-app.listen(3000, () => {
-console.log('🚀 Server running at http://localhost:3000');
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
